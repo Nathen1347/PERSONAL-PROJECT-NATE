@@ -1,0 +1,83 @@
+const bcrypt = require("bcryptjs");
+const nodemailer = require("nodemailer");
+
+const postRegister = (req, res) => {
+  const { username, email, firstName, lastName, password } = req.body;
+
+  if (username && password && email) {
+    const db = req.app.get("db");
+
+    db.check_username(username).then((user) => {
+      const existingUser = user[0];
+      if (existingUser) {
+        res.status(400).send("Username Taken.");
+      } else {
+        const salt = bcrypt.genSaltSync(10);
+        const hash = bcrypt.hashSync(password, salt);
+        db.register_user(username, email, firstName, lastName, hash).then(
+          (newUser) => {
+            delete newUser.password;
+            req.session.user = newUser;
+            res.status(200).send(newUser);
+          }
+        );
+      }
+    });
+  } else {
+    res
+      .status(400)
+      .send(
+        "Please provide username, email, first name, last name and password."
+      );
+  }
+
+  let transport = nodemailer.createTransport({
+    service: "hotmail",
+    auth: {
+      user: email,
+      pass: password,
+    },
+  });
+
+  let mailText = {
+    from: "Modern.Finance.2021@outlook.com",
+    to: email,
+    subject: "Welcome to Modern Finance",
+    text: "Thank you for registering with Modern Finance! You are on your way to financial freedom and happiness!",
+  };
+
+  transport.sendMail(mailText, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+};
+
+const postLogin = (req, res) => {
+  const db = req.app.get("db");
+  const { username, password } = req.body;
+  db.check_username(username).then((user) => {
+    if (!user[0]) {
+      return res.status(404).send("User does not exist, please try again");
+    } else if (!bcrypt.compareSync(password, user[0].password)) {
+      return res.status(403).send("Incorrect Password");
+    }
+    delete user[0].password;
+    req.session.user = user[0];
+    res.status(200).send(user[0]);
+  });
+};
+
+const logout = (req, res) => {
+  req.session.destroy();
+  res.sendStatus(200);
+};
+
+const getUser = (req, res) => {};
+
+module.exports = {
+  getUser,
+  postRegister,
+  postLogin,
+  logout,
+};

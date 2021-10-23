@@ -1,0 +1,85 @@
+.Register-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #7FFF00;
+    background-color: rgb(64,64,64);
+    height:45vh;
+    width: 25%;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000;
+}
+
+.Inputs{
+    width: 220px;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    outline: none;
+    text-align: left;
+    padding: 0.4em;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.Input-container{
+    background-color: rgb(64,64,64);
+    margin: 8px;
+}
+
+.Logo-register{
+    font-family: 'Share Tech Mono', monospace;
+    font-size: xx-large;
+    text-decoration: 3px underline;;
+    margin-top: 30px;
+}
+
+.Logo-register-background{
+    background-color: rgb(64,64,64);
+}
+
+.Buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    background-color: rgb(64,64,64);
+    margin-top: 5px;
+}
+
+.Buttons-register{
+    width: 120px;
+    height: 35px;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 5px;
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.Buttons-register:hover{
+    width: 120px;
+    height: 35px;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 5px;
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: #7FFF00;
+    color: black;
+}
+
+.Form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35vh;
+}
+
+.Terms{
+    font-family: 'Share Tech Mono', monospace;
+}

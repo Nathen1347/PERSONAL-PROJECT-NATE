@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(64,64,64);
+}
+.form {
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 400px;
+    padding: 20px;
+    width: 320px;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000;
+  }
+  
+  .input-container {
+    height: 30px;
+    position: relative;
+    width: 100%;
+  }
+
+  .input {
+    background-color: white;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 3px;
+  }
+
+  .add-goal{
+    padding: 8px 20px;
+    background-color: #7FFF00;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.add-goal:hover{
+    padding: 8px 20px;
+    transition: all 0.2s ease-out;
+    background: black;
+    color: white;
+    transition: 250ms;
+}
