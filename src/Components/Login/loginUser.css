@@ -45,26 +45,30 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 220px;
+    width: 240px;
     background-color: rgb(64,64,64);
     margin-top: 5px;
+    
 }
 
 .Buttons-login{
     width: 100px;
-    height: 25px;
+    height: 35px;
     font-family: 'Share Tech Mono', monospace;
     border-radius: 5px;
     border: solid 1px black;
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
 .Buttons-login:hover{
     width: 100px;
-    height: 25px;
+    height: 35px;
     font-family: 'Share Tech Mono', monospace;
     border-radius: 5px;
     border: solid 1px black;
     cursor: pointer;
     background-color: #7FFF00;
+    color: black;
 }

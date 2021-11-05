@@ -1,0 +1,106 @@
+.budget-income {
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 80px;
+    /* padding: 20px; */
+    width: 300px;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px;
+    /* -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000; */
+  }
+
+  .income-container{
+    background-color: rgb(64,64,64);
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 550px;
+    padding: 20px;
+    width: 1000px;
+    margin: 10px;
+    /* -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000; */
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .expense-container{
+    background-color: rgb(64,64,64);
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 550px;
+    padding: 20px;
+    width: 1000px;
+    margin: 10px;
+    -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .total-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 960px;
+  }
+
+  .added-income{
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 50px;
+    padding: 20px;
+    /* width: 950px; */
+    font-family: 'Share Tech Mono', monospace;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center; */
+    /* margin-top: 30px; */
+    margin: 10px;
+    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
+    box-shadow: 0px 6px 20px 3px #000000;
+    font-size: large;
+  }
+
+  .added-income-container{
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 30vh;
+    margin-top: 40px;
+    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
+    box-shadow: 0px 6px 20px 3px #000000;
+  }
+
+  .added-expense-container{
+    display: flex;
+    flex-direction: column;
+    width: 960px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 30vh;
+    margin-top: 40px;
+    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
+    box-shadow: 0px 6px 20px 3px #000000;
+  }

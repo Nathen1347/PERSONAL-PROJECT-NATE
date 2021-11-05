@@ -12,15 +12,15 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <Login /> */}
-        <Register />
-        {/* <NavBar />
+      <NavBar />
         <Switch>
+          <Route exact path="/" component={Register} />
+          <Route path='/login' component={Login} />
           <Route path="/budget" component={Budget} />
           <Route path="/goals" component={Goals} />
           <Route path="/shop" component={Shop} />
           <Route path="/about" component={About} />
-        </Switch> */}
+        </Switch>
       </div>
     </Router>
   );

@@ -1,0 +1,58 @@
+.form-income {
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px #7FFF00;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 20px;
+    width: 950px;
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 5px;
+    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
+    box-shadow: 0px 6px 20px 3px #000000;
+    font-size: large;
+  }
+  
+  .input-container {
+    height: 30px;
+    position: relative;
+    width: 100%;
+  }
+
+  .input-income {
+    background-color: white;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 12px;
+    height: 100%;
+    outline: 0;
+    padding: 2px 10px 0;
+    width: 100px;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 1px;
+  }
+
+  .add-income{
+    padding: .5px 20px;
+    background-color: #7FFF00;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.add-income:hover{
+    padding: .5px 20px;
+    transition: all 0.2s ease-out;
+    background: black;
+    color: white;
+    transition: 250ms;
+}

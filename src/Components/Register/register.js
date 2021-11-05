@@ -1,5 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
 import "./register.css";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [firstName, setFirstName] = useState("");
@@ -7,10 +9,23 @@ const Register = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [clickedRegister, setClickedRegister] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    const body = {
+      firstName,
+      lastName,
+      userName,
+      password,
+      email,
+    };
+
+    console.log(body);
+    axios.post("/api/register", body);
+
+    setClickedRegister({clickedRegister: true})
+  };
   return (
     <div className="Register-container">
       <h1 className="Logo-register">MODERN FINANCE</h1>
@@ -55,11 +70,19 @@ const Register = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label className='Terms'>
+        <label className="Terms">
           <input type="checkbox" />
           Terms & Conditions
         </label>
-        <button className="Buttons-register">Register</button>
+        {clickedRegister ? (
+          <Link to='/login'><button className="Buttons-register">Continue</button></Link>
+        ) : (
+          <button
+            className="Buttons-register"
+          >
+            Register
+          </button>
+        )}
       </form>
     </div>
   );

@@ -2,19 +2,19 @@ const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
 
 const postRegister = (req, res) => {
-  const { username, email, firstName, lastName, password } = req.body;
+  const { userName, email, firstName, lastName, password } = req.body;
 
-  if (username && password && email) {
+  if (userName && password && email) {
     const db = req.app.get("db");
 
-    db.check_username(username).then((user) => {
+    db.check_username(userName).then((user) => {
       const existingUser = user[0];
       if (existingUser) {
         res.status(400).send("Username Taken.");
       } else {
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(password, salt);
-        db.register_user(username, email, firstName, lastName, hash).then(
+        db.register_user(userName, email, firstName, lastName, hash).then(
           (newUser) => {
             delete newUser.password;
             req.session.user = newUser;
@@ -55,8 +55,8 @@ const postRegister = (req, res) => {
 
 const postLogin = (req, res) => {
   const db = req.app.get("db");
-  const { username, password } = req.body;
-  db.check_username(username).then((user) => {
+  const { userName, password } = req.body;
+  db.check_username(userName).then((user) => {
     if (!user[0]) {
       return res.status(404).send("User does not exist, please try again");
     } else if (!bcrypt.compareSync(password, user[0].password)) {
