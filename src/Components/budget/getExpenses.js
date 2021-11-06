@@ -25,7 +25,13 @@ class DisplayExpenses extends Component {
     return (
       <div>
         {expenses.length
-          ? expenses.map((expense) => <div key={expense.id}>{expense.id}</div>)
+          ? expenses.map((expense) => <div key={expense.id}>
+              {expense.id}
+              <div>{expense.item}</div>
+              <div>{expense.category}</div>
+              <div>{expense.purchase_date}</div>
+              <div>{expense.expense_amount}</div>
+              </div>)
           : null}
       </div>
     );

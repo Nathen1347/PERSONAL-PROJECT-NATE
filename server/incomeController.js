@@ -35,7 +35,7 @@ const editIncome = (req,res) => {
 
 const deleteIncome = (req,res) => {
     const db = req.app.get('db')
-    const {id} = req.params;
+    const {id} = req.query;
     db.delete_income(id)
     .then(()=>res.sendStatus(200))
     .catch((e)=> console.log(e))
