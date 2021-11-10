@@ -41,7 +41,7 @@ app.delete('/api/logout', logout)
 app.get('/api/budget', getBudget)
 app.post('/api/budget', addBudget)
 app.put('/api/budget/:id', editBudget)
-app.delete('/api/budget', deleteBudget)
+app.delete('/api/budget/:id', deleteBudget)
 
 //Goal Endpoints
 app.get('/api/goal', getGoal)

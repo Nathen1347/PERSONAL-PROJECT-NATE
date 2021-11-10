@@ -20,7 +20,7 @@ class DisplayGoals extends Component {
     axios.delete(`/api/goal/${id}`)
     .then((response)=> {
       console.log(response)
-      this.setState({goals: this.state.goals.filter()})
+      this.setState({goals: this.state.goals.filter((goals) =>goals.id !== id)})
     })
   }
   render() {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./loginUser.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -44,6 +44,7 @@ const Login = () => {
       <button className="Buttons-login" onClick={login}>
         Login
       </button>
+      <Link to='/register'><button className="Buttons-login">Register</button></Link>
     </div>
   );
 };

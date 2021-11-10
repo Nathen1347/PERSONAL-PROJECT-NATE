@@ -32,7 +32,12 @@ const postRegister = (req, res) => {
   }
 
   let transport = nodemailer.createTransport({
-    service: "hotmail",
+    host: "smtp-mail.outlook.com",
+    secureConnection: false,
+    port: 587,
+    tls: {
+      ciphers:'SSLv3'
+   },
     auth: {
       user: email,
       pass: password,
@@ -46,10 +51,11 @@ const postRegister = (req, res) => {
     text: "Thank you for registering with Modern Finance! You are on your way to financial freedom and happiness!",
   };
 
-  transport.sendMail(mailText, (err) => {
+  transport.sendMail(mailText, function(err){
     if (err) {
       console.log(err);
     }
+    console.log('Message Sent')
   });
 };
 

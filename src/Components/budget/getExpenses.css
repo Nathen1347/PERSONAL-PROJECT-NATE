@@ -1,0 +1,38 @@
+.delete-expense{
+    padding: .5px 10px;
+    background-color: #7FFF00;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.delete-expense:hover{
+    padding: .5px 10px;
+    transition: all 0.2s ease-out;
+    background: black;
+    color: white;
+    transition: 250ms;
+}
+
+.get-expense{
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px black;
+    box-sizing: border-box;
+    height: 55px;
+    /* padding: 20px; */
+    /* width: 950px; */
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 30px; */
+    margin: 10px;
+    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
+    box-shadow: 0px 6px 20px 3px #000000;
+    font-size: large;
+}
