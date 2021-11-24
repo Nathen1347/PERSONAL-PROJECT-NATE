@@ -1,19 +1,19 @@
 .form-budget {
     background-color: #808080;
     border-radius: 10px;
-    border: solid 1px #7FFF00;
+    border: solid 1px black;
     box-sizing: border-box;
     height: 60px;
     padding: 20px;
     width: 950px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
     margin: 5px;
-    -webkit-box-shadow: 0px 10px 20px 5px #000000; 
-    box-shadow: 0px 10px 20px 5px #000000;
+    -webkit-box-shadow: 1px 1px 15px 1px #000000; 
+    box-shadow: 1px 1px 15px 1px #000000;
     font-size: large;
 }
 
@@ -23,12 +23,12 @@
     border: 0;
     box-sizing: border-box;
     color: black;
-    font-size: 18px;
+    font-size: 13px;
     height: 100%;
     outline: 0;
-    padding: 4px 20px 0;
+    padding: 1px 10px 0;
     width: 150px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     margin: 3px;
   }
 
@@ -38,12 +38,12 @@
     border: 0;
     box-sizing: border-box;
     color: black;
-    font-size: 12px;
+    font-size: 13px;
     height: 100%;
     outline: 0;
-    padding: 2px 10px 0;
+    padding: 1px 10px 0;
     width: 100px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     margin: 1px;
   }
 
@@ -55,7 +55,7 @@
     border: none;
     cursor: pointer;
     font-size: medium;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 .add-expenses:hover{

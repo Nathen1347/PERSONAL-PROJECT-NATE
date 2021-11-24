@@ -21,7 +21,7 @@
     outline: none;
     text-align: left;
     padding: 0.4em;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 .Input-container{
@@ -30,7 +30,7 @@
 }
 
 .Logo-login{
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: x-large;
     text-decoration: 3px underline;;
     margin-top: 30px;
@@ -45,16 +45,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
-    background-color: rgb(64,64,64);
+    width: 230px;
     margin-top: 5px;
-    
 }
 
 .Buttons-login{
     width: 100px;
     height: 35px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     border: solid 1px black;
     cursor: pointer;
@@ -65,7 +63,7 @@
 .Buttons-login:hover{
     width: 100px;
     height: 35px;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     border: solid 1px black;
     cursor: pointer;

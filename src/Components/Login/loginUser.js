@@ -15,8 +15,9 @@ const Login = () => {
       password,
     };
     axios.post("/api/login", body).then((res) => {
-    history.push('/about')
-    console.log('Success')});
+      history.push("/about");
+      console.log("Success");
+    });
   };
 
   return (
@@ -41,10 +42,14 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <button className="Buttons-login" onClick={login}>
-        Login
-      </button>
-      <Link to='/register'><button className="Buttons-login">Register</button></Link>
+      <div className="Buttons-container">
+        <button className="Buttons-login" onClick={login}>
+          Login
+        </button>
+        <Link to="/register">
+          <button className="Buttons-login">Register</button>
+        </Link>
+      </div>
     </div>
   );
 };

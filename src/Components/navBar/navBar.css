@@ -21,7 +21,8 @@
     border: none;
     cursor: pointer;
     font-size: large;
-    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 .Log-out:hover{
@@ -36,9 +37,11 @@
     color: black;
     justify-self: start;
     cursor: pointer;
-    text-decoration: underline;
-    font-family: 'Share Tech Mono', monospace;
+    /* text-decoration: underline; */
+    font-family: 'Roboto', sans-serif;
     font-size: xx-large;
+    margin-left: 10px;
+    width: 240px;
 }
 
 /* .logo-container{
@@ -61,8 +64,9 @@
     text-decoration: none;
     padding: 4px 15px;
     /* padding-bottom: 15px; */
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: x-large;
+    font-weight: bold;
     margin: 20px;
 }
 

@@ -5,13 +5,13 @@ import './income.css';
 const Income = () => {
   const [incomeSource, setIncomeSource] = useState("");
   const [incomeAmount, setIncomeAmount] = useState("");
-  const [payDate, setPayDate] = useState("");
+  // const [payDate, setPayDate] = useState("");
 
   const incomeSubmit = () => {
     const body = {
       incomeSource,
       incomeAmount,
-      payDate,
+      // payDate,
     };
     axios.post("/api/income", body);
   };
@@ -33,13 +33,13 @@ const Income = () => {
           value={incomeAmount}
           onChange={(e) => setIncomeAmount(e.target.value)}
         />
-        <label>Pay Day:</label>
+        {/* <label>Pay Day:</label>
         <input
         className='input-income'
           required
           value={payDate}
           onChange={(e) => setPayDate(e.target.value)}
-        />
+        /> */}
         <button className='add-income'>Add</button>
       </form>
     </div>

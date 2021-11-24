@@ -3,6 +3,8 @@ import "./budgetMain.css";
 import Expenses from "./expensesComp";
 import DisplayIncome from "./getIncome";
 import DisplayExpenses from "./getExpenses";
+
+
 function Budget() {
   return (
     <div>
@@ -12,16 +14,14 @@ function Budget() {
             <h1 className="budget-income">INCOME</h1>
           </div>
           <div className="budget-income">
-            <h1>MONTH</h1>
-          </div>
-          <div className="budget-income">
-            <h1>TOTAL:</h1>
+            <h1>MONTH:</h1>
           </div>
         </div>
         <Income />
         <div className='added-income-container'>
             <DisplayIncome />
         </div>
+            
       </div>
       <div className="expense-container">
         <div className='total-container'>
@@ -29,10 +29,7 @@ function Budget() {
           <h1 className="budget-income">EXPENSES</h1>
         </div>
         <div className='budget-income'>
-          <h1>MONTH</h1>
-        </div>
-        <div className='budget-income'>
-          <h1>TOTAL:</h1>
+          <h1>MONTH:</h1>
         </div>
       </div>
       <Expenses />

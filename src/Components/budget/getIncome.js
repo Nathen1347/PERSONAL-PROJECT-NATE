@@ -37,24 +37,30 @@ class DisplayIncome extends Component {
 
   render() {
     const { income } = this.state;
-    console.log(income);
+    const totalPay = income.reduce(
+      (payTotal, income) => payTotal + income.income_amount,
+      0
+    );
+    
     return (
-      <div>
-        {income.length
-          ? income.map((income) => (
-              <div key={income.id} className="added-income">
-                <div>Source of Income: {income.income_source}</div>
-                <div>Income Total: ${income.income_amount}</div>
-                <div>DATE</div>
-                <button
-                  className="delete-button"
-                  onClick={() => this.deleteIncome(income.id)}
-                >
-                  DELETE
-                </button>
-              </div>
-            ))
-          : null}
+      <div className='income-cont'>
+        <div className='added-income-cont'>
+          {income.length
+            ? income.map((income) => (
+                <div key={income.id} className="added-income">
+                  <div>Source of Income: {income.income_source}</div>
+                  <div>Income Total: ${income.income_amount}</div>
+                  <button
+                    className="delete-button"
+                    onClick={() => this.deleteIncome(income.id)}
+                  >
+                    X
+                  </button>
+                </div>
+              ))
+            : null}
+        </div>
+        <div className="total-income">Total: ${totalPay}</div>
       </div>
     );
   }

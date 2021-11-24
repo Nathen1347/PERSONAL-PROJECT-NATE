@@ -39,14 +39,14 @@ const postRegister = (req, res) => {
       ciphers:'SSLv3'
    },
     auth: {
-      user: email,
-      pass: password,
+      user: 'nate1347@gmail.com',
+      pass: 'Bronco1347'
     },
   });
 
   let mailText = {
     from: "Modern.Finance.2021@outlook.com",
-    to: email,
+    to: 'nate1347@gmail.com',
     subject: "Welcome to Modern Finance",
     text: "Thank you for registering with Modern Finance! You are on your way to financial freedom and happiness!",
   };

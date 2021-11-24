@@ -11,17 +11,18 @@ import Register from "./Components/Register/register";
 function App() {
   return (
     <Router>
-      <div>
-      <NavBar />
+      
         <Switch>
           <Route exact path="/register" component={Register} />
-          <Route path='/login' component={Login} />
+          <Route path="/login" component={Login} />
+          <div>
+        <NavBar />
           <Route path="/budget" component={Budget} />
           <Route path="/goals" component={Goals} />
           <Route path="/shop" component={Shop} />
           <Route path="/about" component={About} />
+          </div>
         </Switch>
-      </div>
     </Router>
   );
 }

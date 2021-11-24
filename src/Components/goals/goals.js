@@ -26,7 +26,7 @@ const Goals = () => {
           <h1>Set Your Goal!</h1>
         </div>
         <div>
-          <form>
+          <form onSubmit={addGoal}>
             <label>Goal Title:</label>
             <input
               className="input"
@@ -61,12 +61,12 @@ const Goals = () => {
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
-          </form>
-        </div>
         <div>
-          <button className="add-goal" onClick={addGoal}>
+          <button className="add-goal" >
             Add Goal
           </button>
+        </div>
+          </form>
         </div>
       </div>
       <div className='added-goal'>

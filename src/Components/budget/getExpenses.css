@@ -6,7 +6,7 @@
     border: none;
     cursor: pointer;
     font-size: medium;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 .delete-expense:hover{
@@ -24,15 +24,48 @@
     box-sizing: border-box;
     height: 55px;
     /* padding: 20px; */
-    /* width: 950px; */
-    font-family: 'Share Tech Mono', monospace;
+    width: 625px;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     /* margin-top: 30px; */
     margin: 10px;
-    -webkit-box-shadow: 0px 6px 20px 3px #000000; 
-    box-shadow: 0px 6px 20px 3px #000000;
+    -webkit-box-shadow: 1px 1px 15px 1px #000000; 
+    box-shadow: 1px 1px 15px 1px #000000;
     font-size: large;
 }
+
+.added-expense-cont{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .expense-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 970px;
+}
+
+.total-expense {
+    background-color: #808080;
+    border-radius: 10px;
+    border: solid 1px black;
+    box-sizing: border-box;
+    height: 250px;
+    /* padding: 20px; */
+    width: 280px;
+    font-family: 'Roboto', sans-serif;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    -webkit-box-shadow: 1px 1px 15px 1px #000000; 
+    box-shadow: 1px 1px 15px 1px #000000;
+    font-size: xx-large;
+  }
