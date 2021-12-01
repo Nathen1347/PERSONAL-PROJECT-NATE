@@ -46,7 +46,7 @@ const Login = () => {
         <button className="Buttons-login" onClick={login}>
           Login
         </button>
-        <Link to="/register">
+        <Link to="/">
           <button className="Buttons-login">Register</button>
         </Link>
       </div>

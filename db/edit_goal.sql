@@ -1,5 +1,5 @@
 UPDATE goals
-SET achieved_goal = $2
+SET amount_now = $2
 WHERE id = $1;
 
 SELECT * FROM goals

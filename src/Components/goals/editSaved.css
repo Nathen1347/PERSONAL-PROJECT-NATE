@@ -1,0 +1,56 @@
+.form-add-saving {
+    /* background-color: rgb(64,64,64); */
+    border-radius: 10px;
+    /* border: solid 1px black; */
+    box-sizing: border-box;
+    height: 150px;
+    padding: 20px;
+    width: 320px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* -webkit-box-shadow: 0px 10px 20px 5px #000000; 
+    box-shadow: 0px 10px 20px 5px #000000; */
+    font-weight: bold;
+  }
+
+  .input-saved {
+    background-color: white;
+    border-radius: 10px;
+    border: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 20px;
+    height: 30px;
+    outline: 0;
+    padding: 1px 10px ;
+    width: 200px;
+    font-family: 'Roboto', sans-serif;
+    margin: 3px;
+  }
+
+  .label-saved{
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+  }
+
+  .button-saved{
+    padding: .5px 10px;
+    background-color: #7FFF00;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .button-saved:hover{
+    padding: .5px 10px;
+    transition: all 0.2s ease-out;
+    background: black;
+    color: white;
+    transition: 250ms;
+  }

@@ -12,10 +12,10 @@ const addGoal = (req,res) => {
     const {
         goalTitle,
         goalTotal,
-        achievedGoal,
-        achieveGoalBy
+        saveDate,
+        amountNow
     } = req.body;
-    db.add_goal(goalTitle, goalTotal, achievedGoal, achieveGoalBy)
+    db.add_goal(goalTitle, goalTotal, saveDate, amountNow)
     .then(()=> {
         res.sendStatus(200)})
     .catch((e) => res.status(500).send(e))
@@ -24,8 +24,8 @@ const addGoal = (req,res) => {
 const editGoal = (req,res) => {
     const db = req.app.get('db');
     const {id} = req.params;
-    const {achievedGoal} = req.query;
-    db.edit_goal(id, achievedGoal)
+    const {amountNow} = req.query;
+    db.edit_goal(id, amountNow)
     .then(()=> res.sendStatus(200))
     .catch((e)=> console.log(e))
 }
