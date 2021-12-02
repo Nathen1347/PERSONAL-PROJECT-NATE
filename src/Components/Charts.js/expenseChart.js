@@ -12,10 +12,22 @@ const ExpenseChart = () => {
       .get("/api/budget")
       .then((res) => {
         console.log(res);
-        for (const expense of res.data) {
-          useExpense.push(expense.expense_amount)
-          useCategory.push(expense.category)
+
+        const userExp = {}
+        for (const exp of res.data){
+          if(userExp[exp.category]){
+            userExp[exp.category] += +exp.expense_amount;
+          }else{
+            userExp[exp.category] = + exp.expense_amount;
+          }
         }
+
+        Object.keys(userExp).forEach((exp)=>{
+          useExpense.push(userExp[exp]);
+          useCategory.push(exp)
+        })
+        
+
         console.log(res.data)
         setChartData({
           labels: useCategory,

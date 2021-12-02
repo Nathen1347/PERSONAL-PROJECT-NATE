@@ -8,6 +8,7 @@ class NavBar extends Component {
     super();
     this.state = {
       menuClick: false,
+      user: [],
     };
   }
 
@@ -19,7 +20,16 @@ class NavBar extends Component {
     axios.delete("/api/logout");
   };
 
+  componentDidMount = () => {
+    axios.get("/api/me").then((response) => {
+      console.log(response);
+      this.setState({ user: response.data });
+      
+    });
+  };
+
   render() {
+    const {user} = this.state;
     return (
       <nav className="Navbar">
         <div className="logo-container">
@@ -45,6 +55,11 @@ class NavBar extends Component {
               <li className="nav-links">About</li>
             </Link>
           </ul>
+        </div>
+        <div>
+          {user.length ? user.map((myself)=>(
+            <div className='user'>{myself.first_name}</div>
+          )): null}
         </div>
         <div>
           {" "}

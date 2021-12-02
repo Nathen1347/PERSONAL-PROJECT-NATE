@@ -13,10 +13,21 @@ const IncomeChart = () => {
       .get("/api/income")
       .then((res) => {
         console.log(res);
-        for (const income of res.data) {
-          useIncome.push(income.income_amount)
-          sourceOf.push(income.income_source)
+
+        const jobMap = {};
+        for (const job of res.data) {
+          if(jobMap[job.income_source]){
+            jobMap[job.income_source] += +job.income_amount;
+          } else {
+            jobMap[job.income_source] =+ job.income_amount;
+          }
         }
+
+        Object.keys(jobMap).forEach((job) => {
+          useIncome.push(jobMap[job])
+          sourceOf.push(job)
+        })
+       
         console.log(res.data)
         setChartData({
           labels: sourceOf,

@@ -25,6 +25,10 @@ class DisplayGoals extends Component {
       });
     });
   };
+
+  changeGoals = (goals) => {
+    this.setState({goals})
+  }
   render() {
     const { goals } = this.state;
     return (
@@ -57,7 +61,7 @@ class DisplayGoals extends Component {
                     </button>
                   </div>
                   <div>
-                    <EditSavingsAmount />
+                    <EditSavingsAmount currentAmount={goal.amount_now} id={goal.id} changeGoals={this.changeGoals}/>
                   </div>
                 </div>
               </div>

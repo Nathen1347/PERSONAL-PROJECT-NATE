@@ -2,12 +2,20 @@ import React, { useState } from "react";
 import axios from "axios";
 import './editSaved.css'
 
-const EditSavingsAmount = (props) => {
-  const editSavedAmount = (id, amountNow) => {
+const EditSavingsAmount = ({currentAmount, id, changeGoals}) => {
+    const [inputAmount, setAmount] = useState(0);
+
+    const editSavedAmount = () => {
+
+    let body = {
+        id,
+        amountNow: +currentAmount + +inputAmount
+    }
+
     axios
-      .put(`/api/goal/${id}/${amountNow}`)
+      .put(`/api/goal`, body)
       .then((response) => {
-        console.log(response);
+        changeGoals(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -21,6 +29,8 @@ const EditSavingsAmount = (props) => {
           <label className='label-saved'>Add to your Saving's Goal</label>
           <input
           className='input-saved'
+          value={inputAmount}
+          onChange={(e) => setAmount(e.target.value)}
           />
           <button className='button-saved'onClick={editSavedAmount}>Add Money</button>
         </form>

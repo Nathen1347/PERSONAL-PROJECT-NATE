@@ -17,6 +17,7 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 365,
     }
 }))
+app.use(express.static(`${__dirname}/../build`))
 
 massive({
     connectionString: process.env.CONNECTION_STRING,
@@ -30,6 +31,7 @@ massive({
 .catch((e)=>{
     console.log('DB connection error', e);
 })
+
 
 //Authentication Endpoints
 app.post('/api/register', postRegister)
@@ -46,7 +48,7 @@ app.delete('/api/budget/:id', deleteBudget)
 //Goal Endpoints
 app.get('/api/goal', getGoal)
 app.post('/api/goal', addGoal)
-app.put('/api/goal/:id', editGoal)
+app.put('/api/goal', editGoal)
 app.delete('/api/goal/:id', deleteGoal)
 
 //Income Endpoints
@@ -55,5 +57,5 @@ app.post('/api/income', addIncome)
 app.put('/api/income/:id', editIncome)
 app.delete('/api/income/:id', deleteIncome)
 
-const PORT = process.env.SERVER_PORT;
+const PORT = process.env.SERVER_PORT || 5051;
 app.listen(PORT, ()=> console.log(`Servering running on ${PORT}`))
