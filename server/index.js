@@ -6,6 +6,7 @@ const {getBudget, addBudget, editBudget, deleteBudget} = require('./budgetContro
 const {getGoal, addGoal, editGoal, deleteGoal} = require('./goalController')
 const {getIncome, addIncome, editIncome, deleteIncome} = require('./incomeController')
 const {getUser, postRegister, postLogin, logout} = require('./authController')
+const path = require('path')
 const app = express();
 
 app.use(express.json())
@@ -31,7 +32,7 @@ massive({
     console.log('DB connection error', e);
 })
 
-app.use(express.static(`${__dirname}/../build`));
+app.use(express.static(path.join(`${__dirname}/../build`)));
 
 //Authentication Endpoints
 app.post('/api/register', postRegister)
@@ -56,6 +57,10 @@ app.get('/api/income', getIncome)
 app.post('/api/income', addIncome)
 app.put('/api/income/:id', editIncome)
 app.delete('/api/income/:id', deleteIncome)
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../build', 'index.html'));
+  });
 
 const PORT = process.env.PORT|| 5051;
 app.listen(PORT, ()=> console.log(`Servering running on ${PORT}`))
